@@ -20,18 +20,14 @@ public class Presenter {
                     pb.createContact(contact_data[0], contact_data[1]);
                     break;
                 case "2":
-                    contact = view.getContactName();
-                    System.out.println(pb.viewContact(contact));
+                    System.out.println(pb.viewContact(view.getContactName()));
                     break;
                 case "3":
-                    contact = view.getContactName();
-                    pb.deleteContact(contact);
+                    pb.deleteContact(view.getContactName());
                     System.out.println("Контакт удален!");
                     break;
                 case "4":
-                    contact = view.getContactName();
-                    String newNumber = view.getContactNumber();
-                    pb.updateContact(contact, newNumber);
+                    pb.updateContact(view.getContactName(), view.getContactNumber());
                     break;
                 case "5":
                     work = false;
