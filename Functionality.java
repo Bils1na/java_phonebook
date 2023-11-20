@@ -1,7 +1,9 @@
-public interface Functionality {
-    void createContact(Contact contact);
+import java.util.List;
 
-    String viewContact();
+public interface Functionality {
+    void createContact(String name, String number);
+
+    String viewContact(String name);
 
     void deleteContact(Contact contact);
 

@@ -9,13 +9,20 @@ public class PhoneBook implements Functionality {
     }
 
     @Override
-    public void createContact(Contact contact) {
+    public void createContact(String name, String number) {
+        Contact contact = new Contact(name, number);
         phonebook.add(contact);
     }
 
     @Override
-    public String viewContact() {
-        return String.format("%s: %s", phonebook, phonebook);
+    public String viewContact(String name) {
+        for (Contact contact : phonebook) {
+            if ((contact.name).equals(name)) {
+                return String.format("%s: %s", contact.name, contact.numbers);
+            }
+        }
+        return "Контакт не найден";
+        // return phonebook;
     }
 
     @Override
