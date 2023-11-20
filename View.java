@@ -21,4 +21,10 @@ public class View {
         String input = in.next();
         return input;
     }
+
+    public String getContactNumber() {
+        System.out.println("Введите номер контакта:");
+        String input = in.next();
+        return input;
+    }
 }

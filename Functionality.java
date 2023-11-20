@@ -1,11 +1,9 @@
-import java.util.List;
-
 public interface Functionality {
     void createContact(String name, String number);
 
     String viewContact(String name);
 
-    void deleteContact(Contact contact);
+    void deleteContact(String name);
 
-    void updateContact(Contact contact);
+    void updateContact(String name, String number);
 }

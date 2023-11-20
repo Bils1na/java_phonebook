@@ -22,15 +22,26 @@ public class PhoneBook implements Functionality {
             }
         }
         return "Контакт не найден";
-        // return phonebook;
     }
 
     @Override
-    public void deleteContact(Contact contact) {
+    public void deleteContact(String name) {
+        while (phonebook.iterator().hasNext()) {
+            Contact contact = phonebook.iterator().next();
+            if ((contact.name).equals(name)) {
+                phonebook.remove(contact);
+            }
+        }
     }
 
     @Override
-    public void updateContact(Contact contact) {
+    public void updateContact(String name, String number) {
+        while (phonebook.iterator().hasNext()) {
+            Contact contact = phonebook.iterator().next();
+            if ((contact.name).equals(name)) {
+                contact.numbers.add(number);
+            }
+        }
     }
 
     
